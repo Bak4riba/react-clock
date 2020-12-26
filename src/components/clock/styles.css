@@ -1,0 +1,26 @@
+
+.div-clock{
+  background-color:darkslateblue;
+  border-width: 3px;
+  border-style: solid;
+  width: 30vw;
+  height: 20vh;
+  min-width: 200px;
+  min-height: 120px;
+  border-radius: 30px;
+  margin-top: 0vh;
+
+}
+
+.div-container{
+  display: flex;
+  justify-content: center;
+}
+
+.text-clock{
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 40px;
+}
+

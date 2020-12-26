@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Clock from './components/clock'/* 
+import {hora} from './components/clock' */
+import Message from './components/message'
 
 function App() {
+  const data = new Date()
+  const hora= data.getHours()
+  const [horas, setHoras] = useState(hora)
+  setInterval(() => {
+    setHoras(hora)
+  }, 1000);
+  const bgdefault = (horas >= 18 || horas <= 5) ? "bg-night" : "bg-day"
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div  className={`div-main  ${bgdefault}`}>
+      <Clock/>
+      {/* <Message time={`${bgdefault}`}/> */}
     </div>
   );
 }
