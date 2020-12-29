@@ -1,7 +1,5 @@
 import React,{useState} from 'react'
-import Clock from './components/clock'/* 
-import {hora} from './components/clock' */
-import Message from './components/message'
+import Clock from './components/clock'
 
 function App() {
   const data = new Date()
